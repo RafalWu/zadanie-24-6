@@ -1,6 +1,7 @@
 import PlayersList from './PlayersList';
 import React from 'react';
 import { shallow } from 'enzyme';
+import Player from '../Player/Player';
 
 it('renders without crashing', () => {
   shallow(<PlayersList players={[]} />);
@@ -18,6 +19,8 @@ it('renders correct number of players', () => {
 		}
 	]
 	const playerComponent = shallow(<PlayersList players={players} />);
-	const expectedPlayersNumber = playerComponent.find('li').length;
+	console.log(playerComponent.debug());
+	
+	const expectedPlayersNumber = playerComponent.find(Player).length;
 	expect(expectedPlayersNumber).toEqual(2);
 });
