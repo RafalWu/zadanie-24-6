@@ -1,6 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import App from './App';
+import AddPlayer from './components/AddPlayer/AddPlayer';
 
 it('renders without crashing', () => {
   shallow(<App />);
